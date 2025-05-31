@@ -63,35 +63,37 @@ Sistema modular por capas que separa claramente:
 
 ## 📦 Estructura del proyecto
 
-ecomarket/
+```
+EcoMarket/
 │
 ├── frontend/
-│   ├── src/
-│   │   ├── components/           # Atomic components (atoms/molecules/etc.)
-│   │   ├── hooks/                # Custom React hooks
-│   │   ├── pages/                # Page-level components
-│   │   ├── services/             # API requests
-│   │   ├── context/              # Estado global
-│   │   └── utils/                # Funciones auxiliares
-│   └── public/
+│   └── src/
+│       ├── components/        # 🧩 UI modular (Atomic Design)
+│       ├── hooks/             # 🧠 Custom Hooks para lógica de negocio
+│       ├── pages/             # 📄 Vistas con patrón Container/Presenter
+│       ├── services/          # 🔌 Conexión con APIs (Service Layer)
+│       ├── context/           # 🌐 Manejo de estado global (Context API)
+│       └── utils/             # 🛠️ Funciones auxiliares reutilizables
 │
 ├── backend/
-│   ├── app/
-│   │   ├── api/                  # Rutas FastAPI
-│   │   ├── services/             # Lógica de negocio
-│   │   ├── models/               # Pydantic schemas
-│   │   ├── db/                   # Repositorios y conexión a DB
-│   │   ├── integrations/         # Stripe, Firebase, etc.
-│   │   └── ai/                   # Modelo YOLOv8 y predicciones
-│   └── main.py
+│   └── app/
+│       ├── api/               # 🌐 Rutas y controladores FastAPI
+│       ├── services/          # ⚙️ Lógica de negocio (Service Layer)
+│       ├── models/            # 📦 Validaciones y esquemas Pydantic
+│       ├── db/                # 🗃️ Acceso a base de datos (Repository Pattern)
+│       ├── ai/                # 🤖 Adaptador IA (YOLOv8)
+│       └── integrations/      # 🌍 APIs externas (Stripe, Firebase, Lingo)
 │
 ├── docker/
-│   └── docker-compose.yml
-└── README.txt (este archivo)
+│   └── docker-compose.yml     # 🐳 Contenedor local para desarrollo
+│
+├── docs/
+│   └── assets/                # 🖼️ Imágenes, mockups, diagramas
+│
+└── README.txt                 # 📘 Documentación principal del proyecto
+```
 
 ------
-
-
 
 ## 📦 Estructura del Proyecto — Implementación + Patrones de Diseño
 
