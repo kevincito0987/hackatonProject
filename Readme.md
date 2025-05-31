@@ -64,25 +64,30 @@ Sistema modular por capas que separa claramente:
 ## 📦 Estructura del proyecto
 
 ecomarket/
- ├── frontend/
- │   ├── src/components/
- │   ├── src/hooks/
- │   ├── src/pages/
- │   ├── src/services/
- │   ├── src/context/
- │   └── src/utils/
- │
- ├── backend/
- │   ├── app/api/
- │   ├── app/services/
- │   ├── app/models/
- │   ├── app/db/
- │   ├── app/ai/
- │   └── app/integrations/
- │
- ├── docker/docker-compose.yml
- ├── docs/assets/
- └── README.txt
+│
+├── frontend/
+│   ├── src/
+│   │   ├── components/           # Atomic components (atoms/molecules/etc.)
+│   │   ├── hooks/                # Custom React hooks
+│   │   ├── pages/                # Page-level components
+│   │   ├── services/             # API requests
+│   │   ├── context/              # Estado global
+│   │   └── utils/                # Funciones auxiliares
+│   └── public/
+│
+├── backend/
+│   ├── app/
+│   │   ├── api/                  # Rutas FastAPI
+│   │   ├── services/             # Lógica de negocio
+│   │   ├── models/               # Pydantic schemas
+│   │   ├── db/                   # Repositorios y conexión a DB
+│   │   ├── integrations/         # Stripe, Firebase, etc.
+│   │   └── ai/                   # Modelo YOLOv8 y predicciones
+│   └── main.py
+│
+├── docker/
+│   └── docker-compose.yml
+└── README.txt (este archivo)
 
 ------
 
